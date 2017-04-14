@@ -1,0 +1,6 @@
+C:\Sumit\Study\NetPractice2\WcfClient\WcfClient\bin\Debug\WcfClient.exe.config
+C:\Sumit\Study\NetPractice2\WcfClient\WcfClient\bin\Debug\WcfClient.exe
+C:\Sumit\Study\NetPractice2\WcfClient\WcfClient\bin\Debug\WcfClient.pdb
+C:\Sumit\Study\NetPractice2\WcfClient\WcfClient\obj\Debug\WcfClient.csprojResolveAssemblyReference.cache
+C:\Sumit\Study\NetPractice2\WcfClient\WcfClient\obj\Debug\WcfClient.exe
+C:\Sumit\Study\NetPractice2\WcfClient\WcfClient\obj\Debug\WcfClient.pdb
