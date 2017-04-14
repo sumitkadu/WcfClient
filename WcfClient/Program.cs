@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace WcfClient
 {
@@ -10,13 +7,22 @@ namespace WcfClient
     {
         static void Main(string[] args)
         {
-            //WcfService.RestServiceClient client = new WcfService.RestServiceClient();
+            WcfService.RestServiceClient client = new WcfService.RestServiceClient();
+
+            using (StreamReader reader = new StreamReader("Output.json"))
+            {
+                string content = reader.ReadToEnd();
+                string status = client.PostData(content);
+                Console.Write(status);
+                reader.Close();
+            }
+
+               
+
+            //RemoteWcfHost.RestServiceClient client = new RemoteWcfHost.RestServiceClient();
             //string content = client.GetData();
 
-            RemoteWcfHost.RestServiceClient client = new RemoteWcfHost.RestServiceClient();
-            string content = client.GetData();
-
-            Console.Write(content);
+            
             Console.ReadLine();
         }
     }

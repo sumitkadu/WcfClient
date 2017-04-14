@@ -60,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="Output.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Service References\RemoteWcfHost\RestService.wsdl" />
     <None Include="Service References\RemoteWcfHost\RestService.xsd">
       <SubType>Designer</SubType>

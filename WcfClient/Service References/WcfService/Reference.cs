@@ -20,6 +20,12 @@ namespace WcfClient.WcfService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRestService/GetData", ReplyAction="http://tempuri.org/IRestService/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRestService/PostData", ReplyAction="http://tempuri.org/IRestService/PostDataResponse")]
+        string PostData(string data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRestService/PostData", ReplyAction="http://tempuri.org/IRestService/PostDataResponse")]
+        System.Threading.Tasks.Task<string> PostDataAsync(string data);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +61,14 @@ namespace WcfClient.WcfService {
         
         public System.Threading.Tasks.Task<string> GetDataAsync() {
             return base.Channel.GetDataAsync();
+        }
+        
+        public string PostData(string data) {
+            return base.Channel.PostData(data);
+        }
+        
+        public System.Threading.Tasks.Task<string> PostDataAsync(string data) {
+            return base.Channel.PostDataAsync(data);
         }
     }
 }

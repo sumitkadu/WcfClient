@@ -12,16 +12,35 @@
   <wsdl:message name="IRestService_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IRestService_PostData_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostData" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_PostData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRestService">
     <wsdl:operation name="GetData">
       <wsdl:input wsam:Action="http://tempuri.org/IRestService/GetData" message="tns:IRestService_GetData_InputMessage" />
       <wsdl:output wsam:Action="http://tempuri.org/IRestService/GetDataResponse" message="tns:IRestService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostData">
+      <wsdl:input wsam:Action="http://tempuri.org/IRestService/PostData" message="tns:IRestService_PostData_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IRestService/PostDataResponse" message="tns:IRestService_PostData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRestService" type="tns:IRestService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IRestService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostData">
+      <soap:operation soapAction="http://tempuri.org/IRestService/PostData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
